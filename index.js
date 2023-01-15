@@ -20,9 +20,12 @@ const recoginiton=new speechRecogination
 
 recoginiton.onstart=function (){
     console.log("voice recording")
+    btn.style="background: white;"
 }
 
+
 recoginiton.onresult=function(e){
+    console.log(e)
     const current=e.resultIndex;
     let trans=e.results[current][0].transcript;
     if((trans=="who is bipul") ||( trans=="what is your name " )|| (trans=="Who created you ")||(trans=="bipul")||(trans=="Vipul")) {
@@ -34,6 +37,8 @@ recoginiton.onresult=function(e){
     content.textContent=trans
     console.log(trans)
     read(trans)
+    btn.style="background: none;"
+    
 
 }
 
@@ -47,7 +52,7 @@ function read(message){
  speech.text=message;
 
  speech.volume=2;
- speech.rate=0.5;
+ speech.rate=1;
  speech.pitch=1 ;
  window.speechSynthesis.speak(speech)
 }
