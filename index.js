@@ -28,12 +28,22 @@ recoginiton.onresult=function(e){
     console.log(e)
     const current=e.resultIndex;
     let trans=e.results[current][0].transcript;
-    if((trans=="who is bipul") ||( trans=="what is your name " )|| (trans=="Who created you ")||(trans=="bipul")||(trans=="Vipul")) {
+    if((trans=="who is bipul") ||( trans=="what is your name " )|| (trans=="Who created you ")||(trans=="bipul")||(trans=="Vipul")||(trans=="who is vipul") ) {
        trans="BIPUL, YOUR FATHER MOTHERFUCKER";
        }
-       else if((trans=="Bipul kon hai") ||( trans=="tumhara naam kya hai" )|| (trans=="tumko kisne banaya")) {
+       else if((trans=="Bipul kon hai")||(trans="Vipul kon hai") ||( trans=="tumhara naam kya hai" )|| (trans=="tumko kisne banaya")) {
            trans="BIPUL, tera baap madarchod bhosdikee";
        }
+    else if((trans=="Reshu")){
+     trans="Amardeep"   
+    }
+    
+     else if((trans=="rohit")){
+     trans="shreya"   
+    }
+     else if((trans=="amrit")){
+     trans="soumi"   
+    }
     content.textContent=trans
     console.log(trans)
     read(trans)
@@ -52,7 +62,7 @@ function read(message){
  speech.text=message;
 
  speech.volume=2;
- speech.rate=1;
+ speech.rate=1.2;
  speech.pitch=1 ;
  window.speechSynthesis.speak(speech)
 }
