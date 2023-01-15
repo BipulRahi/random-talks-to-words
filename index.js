@@ -31,7 +31,7 @@ recoginiton.onresult=function(e){
     if((trans=="who is bipul") ||( trans=="what is your name " )|| (trans=="Who created you ")||(trans=="bipul")||(trans=="Vipul")||(trans=="who is vipul") ) {
        trans="BIPUL, YOUR FATHER MOTHERFUCKER";
        }
-       else if((trans=="Bipul kon hai")||(trans="Vipul kon hai") ||( trans=="tumhara naam kya hai" )|| (trans=="tumko kisne banaya")) {
+       else if((trans=="Bipul kaun hai")||(trans="Vipul kaun hai") ||( trans=="tumhara naam kya hai" )|| (trans=="tumko kisne banaya")) {
            trans="BIPUL, tera baap madarchod bhosdikee";
        }
     else if((trans=="Reshu")){
