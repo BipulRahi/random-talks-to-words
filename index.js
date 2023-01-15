@@ -38,10 +38,10 @@ recoginiton.onresult=function(e){
      trans="Amardeep"   
     }
     
-     else if((trans=="rohit")){
+     else if((trans=="Rohit")){
      trans="shreya"   
     }
-     else if((trans=="amrit")){
+     else if((trans=="Amrit")){
      trans="soumi"   
     }
     content.textContent=trans
